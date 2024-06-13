@@ -1,0 +1,87 @@
+* {
+    border: none;
+    font-family: "Ubuntu Nerd Font";
+    font-size: 10px;
+    min-height: 0;
+}
+
+window#waybar {
+    	background: transparent;
+	margin: 2px 2px 0 2px;
+
+	background-color: rgba(50,50,50,0.1);
+    	color: white;
+}
+
+#window {
+    font-weight: bold;
+    font-family: "Ubuntu";
+}
+
+#custom-apps {
+	margin-left: 10px;
+
+	font-size: 15px;
+}
+
+#clock {
+	font-size: 12px;
+    font-weight: bold;
+}
+
+#backlight{
+	margin: 0 5px 0 5px;
+}
+
+#pulseaudio {
+	margin: 0 5px 0 5px;
+	font-size: 11px;
+}
+
+#bluetooth {
+	margin: 0 5px 0 5px;
+	font-size: 12px;
+}
+
+#network {
+	margin: 0 5px 0 5px;
+	font-size: 11px;
+}
+
+#network.disconnected {
+    background: #f53c3c;
+}
+
+#battery {
+	margin: 0 5px 0 5px;
+	font-size: 11px;
+}
+
+
+#battery icon {
+    color: red;
+	font-size: 13px;
+}
+
+#battery.charging {
+}
+
+@keyframes lowBattery {
+    to {
+        color: red;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: red;
+    animation-name: lowBattery;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+	margin: 0 15px 0 5px;
+	font-size: 11px;
+}
